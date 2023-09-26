@@ -1,47 +1,47 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "vg.skye",
+		"id": "silicate",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "Silicate",
+			"description": "Backport 1.20 texture-based pattern rendering to 1.19.2(and maybe other stuff later, idk)",
 			"contributors": {
-				"Your name here": "Owner"
+				"Skye": "Owner"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-kotlin-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-kotlin-template-mod"
+				"homepage": "https://skye.vg/",
+				"issues": "https://github.com/vgskye/HexxyTweaks/issues",
+				"sources": "https://github.com/vgskye/HexxyTweaks"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"icon": "assets/silicate/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
 			"init": {
 				"adapter": "kotlin",
-				"value": "com.example.example_mod.ExampleMod"
+				"value": "vg.skye.silicate.Silicate"
 			}
 		},
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.19.2"
+				"versions": ">=0.19.0"
 			},
 			{
 				"id": "quilted_fabric_api",
-				"versions": ">=7.0.2"
+				"versions": ">=4.0.0-beta.30"
 			},
 			{
 				"id": "qkl",
-				"versions": ">=2.1.0"
+				"versions": ">=1.0.2"
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.20"
+				"versions": ">=1.19.2"
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "silicate.mixins.json"
 }

@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "vg.skye.silicate.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "WallScrollRendererMixin",
+    "BlockEntityAkashicBookshelfMixin",
+    "BlockEntityAkashicBookshelfRendererMixin",
+    "BlockEntitySlateMixin",
+    "BlockEntitySlateRendererMixin",
+    "EntityWallScrollMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

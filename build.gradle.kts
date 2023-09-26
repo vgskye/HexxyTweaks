@@ -22,6 +22,47 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		name = "BlameJared Maven"
+		url = uri("https://maven.blamejared.com/")
+	}
+	maven {
+		url = uri("https://maven.shedaniel.me/")
+	}
+	maven {
+		name = "Ladysnake Mods"
+		url = uri("https://maven.ladysnake.org/releases")
+	}
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = uri("https://api.modrinth.com/maven")
+			}
+		}
+		filter {
+			includeGroup("maven.modrinth")
+		}
+	}
+	maven {
+		url = uri("https://jitpack.io")
+	}
+	maven {
+		url = uri("https://maven.terraformersmc.com/releases/")
+	}
+	maven {
+		name = "GeckoLib"
+		url = uri("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
+	}
+	maven {
+		url = uri("https://maven.jamieswhiteshirt.com/libs-release/")
+	}
+	maven {
+		url = uri("https://mvn.devos.one/snapshots/")
+	}
+	maven {
+		url = uri("https://maven.tterrag.com/")
+	}
 }
 
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
@@ -53,6 +94,13 @@ dependencies {
 	// modImplementation(libs.bundles.qfapi) // If you wish to use the deprecated Fabric API modules
 
 	modImplementation(libs.qkl)
+
+	modImplementation("at.petra-k.hexcasting:hexcasting-fabric-1.19.2:0.10.3") {
+		exclude("net.fabricmc")
+	}
+	modImplementation("com.jozufozu.flywheel:flywheel-fabric-1.19.2:0.6.9-6") {
+		exclude("net.fabricmc")
+	}
 }
 
 tasks {
